@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.laidongs.sba.gateway",
+      "microservicePath": "../trainings"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "gateway",
+    "baseName": "zuulgateway",
+    "packageName": "com.laidongs.sba.gateway",
+    "packageFolder": "com/laidongs/sba/gateway",
+    "serverPort": "9087",
+    "authenticationType": "uaa",
+    "uaaBaseName": "users",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MWUyM2QwZjRlMzk2NmJlNmY5M2I1NjdhMGFmMTgzNDZiYWEwMTQ1MjQ2MDcwMjliOTBmN2VkNGI4NzYwZDY1ZjQyYTdiYjRmMDUyY2RlOTUwYTE5MmMzNzcxZWQ0YjQxNjk0Mzg2NjEzNjA0ZWMzMzM5ZDdhN2EzYzgxY2IyNDY=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "cerulean",
+    "clientThemeVariant": "light",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
