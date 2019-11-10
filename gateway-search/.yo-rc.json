@@ -1,0 +1,52 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.laidongs.sba.gateway"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "gateway",
+    "baseName": "gatewaysearch",
+    "packageName": "com.laidongs.sba.gateway",
+    "packageFolder": "com/laidongs/sba/gateway",
+    "serverPort": "7087",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "MGQ0MDJiYzY1YzA5MDQ3NDBhODE2MzJkNWY2YWRkN2M5NWMzYzE3ODViYjcwOGE4NTNlOWI1NzczN2M4M2QyZDZjOTE5NzVmYmM2ZjE3MjkyMTVlMzNiMzRlNWI2MjE4OGZhMzllMmQ2YzNkZGM0YWNhMTU1YTg3OTM3YjM2ZGU=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "cerulean",
+    "clientThemeVariant": "primary",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-audit-helper",
+        "version": "1.0.3"
+      },
+      {
+        "name": "generator-jhipster-feign-client",
+        "version": "1.0.6"
+      },
+      {
+        "name": "generator-jhipster-blog",
+        "version": "0.0.2"
+      }
+    ],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}

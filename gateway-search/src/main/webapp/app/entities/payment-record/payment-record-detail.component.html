@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="paymentRecord">
+            <h2><span>Payment Record</span> {{paymentRecord.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Txn Type</span></dt>
+                <dd>
+                    <span>{{paymentRecord.txnType}}</span>
+                </dd>
+                <dt><span>Amount</span></dt>
+                <dd>
+                    <span>{{paymentRecord.amount}}</span>
+                </dd>
+                <dt><span>Total Amount To Mentor</span></dt>
+                <dd>
+                    <span>{{paymentRecord.totalAmountToMentor}}</span>
+                </dd>
+                <dt><span>Issued Time</span></dt>
+                <dd>
+                    <span>{{paymentRecord.issuedTime}}</span>
+                </dd>
+                <dt><span>User Id</span></dt>
+                <dd>
+                    <span>{{paymentRecord.userId}}</span>
+                </dd>
+                <dt><span>Train Record Id</span></dt>
+                <dd>
+                    <span>{{paymentRecord.trainRecordId}}</span>
+                </dd>
+                <dt><span>Remarks</span></dt>
+                <dd>
+                    <span>{{paymentRecord.remarks}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/payment-record', paymentRecord.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

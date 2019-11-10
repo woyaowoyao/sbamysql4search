@@ -1,0 +1,74 @@
+{
+    "name": "TrainingRecord",
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "TrainRecordStatus",
+            "fieldValues": "Propose,Progress,Completed",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "progress",
+            "fieldType": "ProgressType",
+            "fieldValues": "One,Two,Three,Four",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "commissionAmount",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "avgRating",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "amountReceived",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "userName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fees",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "remarks",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "training",
+            "otherEntityRelationshipName": "trainingRecord",
+            "relationshipName": "training",
+            "otherEntityField": "name"
+        }
+    ],
+    "changelogDate": "20191110082412",
+    "javadoc": "TrainingRecord entity.\\n@author full stack trainning laidongshi.",
+    "entityTableName": "training_record",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

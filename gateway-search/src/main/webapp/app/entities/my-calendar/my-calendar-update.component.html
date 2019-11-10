@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-my-calendar-heading">Create or edit a My Calendar</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_calDate">Cal Date</label>
+                    <div class="d-flex">
+                        <input id="field_calDate" type="datetime-local" class="form-control" name="calDate" formControlName="calDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_duration">Duration</label>
+                    <select class="form-control" name="duration" formControlName="duration" id="field_duration">
+                        <option value="Morning0800">Morning0800</option>
+                        <option value="Morning1000">Morning1000</option>
+                        <option value="Afternoon1400">Afternoon1400</option>
+                        <option value="Afternoon1600">Afternoon1600</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_remarks">Remarks</label>
+                    <input type="text" class="form-control" name="remarks" id="field_remarks"
+                           formControlName="remarks"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_training">Training</label>
+                    <select class="form-control" id="field_training" name="training" formControlName="training">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="trainingOption.id === editForm.get('training').value?.id ? editForm.get('training').value : trainingOption" *ngFor="let trainingOption of trainings; trackBy: trackTrainingById">{{trainingOption.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

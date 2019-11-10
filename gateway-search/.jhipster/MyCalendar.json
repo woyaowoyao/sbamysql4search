@@ -1,0 +1,38 @@
+{
+    "name": "MyCalendar",
+    "fields": [
+        {
+            "fieldName": "calDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "duration",
+            "fieldType": "DurationType",
+            "fieldValues": "Morning0800,Morning1000,Afternoon1400,Afternoon1600"
+        },
+        {
+            "fieldName": "remarks",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "training",
+            "otherEntityRelationshipName": "myCalendar",
+            "relationshipName": "training",
+            "otherEntityField": "name",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191110082410",
+    "entityTableName": "my_calendar",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

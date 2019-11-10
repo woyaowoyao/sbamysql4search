@@ -1,0 +1,26 @@
+/**
+ * PaymentRecord entity.
+ * @author full stack laidongshi.
+ */
+entity PaymentRecord {
+	id Long,
+	txnType PayTraType required,
+    amount Float required,    
+    totalAmountToMentor Float required,
+	issuedTime Instant required,
+	userId Long,
+	trainRecordId Long,
+	remarks String
+}
+
+enum PayTraType {
+	PAID, ISSUED, CANCELLED
+}
+// Set pagination options
+paginate PaymentRecord with infinite-scroll
+paginate PaymentRecord with pagination
+
+//  Data Transfert Objects (DTO)
+// dto * with mapstruct
+service all with serviceImpl
+

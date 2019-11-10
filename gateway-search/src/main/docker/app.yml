@@ -1,0 +1,22 @@
+version: '2'
+services:
+  gatewaysearch-app:
+    image: gatewaysearch
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:mysql://gatewaysearch-mysql:3306/gatewaysearch?useUnicode=true&characterEncoding=utf8&useSSL=false
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+      - SPRING_DATA_JEST_URI=http://gatewaysearch-elasticsearch:9200
+      - SPRING_ELASTICSEARCH_REST_URIS=http://gatewaysearch-elasticsearch:9200
+    ports:
+      - 7087:7087
+  gatewaysearch-mysql:
+    extends:
+      file: mysql.yml
+      service: gatewaysearch-mysql
+  gatewaysearch-elasticsearch:
+    extends:
+      file: elasticsearch.yml
+      service: gatewaysearch-elasticsearch

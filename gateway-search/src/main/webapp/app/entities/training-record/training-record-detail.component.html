@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="trainingRecord">
+            <h2><span>Training Record</span> {{trainingRecord.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Status</span></dt>
+                <dd>
+                    <span>{{trainingRecord.status}}</span>
+                </dd>
+                <dt><span>Progress</span></dt>
+                <dd>
+                    <span>{{trainingRecord.progress}}</span>
+                </dd>
+                <dt><span>Commission Amount</span></dt>
+                <dd>
+                    <span>{{trainingRecord.commissionAmount}}</span>
+                </dd>
+                <dt><span>Avg Rating</span></dt>
+                <dd>
+                    <span>{{trainingRecord.avgRating}}</span>
+                </dd>
+                <dt><span>Amount Received</span></dt>
+                <dd>
+                    <span>{{trainingRecord.amountReceived}}</span>
+                </dd>
+                <dt><span>User Name</span></dt>
+                <dd>
+                    <span>{{trainingRecord.userName}}</span>
+                </dd>
+                <dt><span>Fees</span></dt>
+                <dd>
+                    <span>{{trainingRecord.fees}}</span>
+                </dd>
+                <dt><span>Remarks</span></dt>
+                <dd>
+                    <span>{{trainingRecord.remarks}}</span>
+                </dd>
+                <dt><span>Training</span></dt>
+                <dd>
+                    <div *ngIf="trainingRecord.training">
+                        <a [routerLink]="['/training', trainingRecord.training?.id, 'view']">{{trainingRecord.training?.name}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/training-record', trainingRecord.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

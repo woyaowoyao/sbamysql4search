@@ -1,0 +1,91 @@
+entity Mentor {
+	id Long,
+	username String  required,
+	linkedin String  ,
+	regDatetime Instant ,
+	regCode  String ,
+	experience Float,
+	status TrainStatus  required
+}
+
+entity MentorSkill {
+	id Long,
+	selfRate  String,
+	experience Float	
+}
+entity MyCalendar {
+	id Long,	
+	calDate Instant,
+	duration DurationType,
+	remarks String	
+}
+/**
+ * Training entity.
+ * @author full stack trainning laidongshi.
+ */
+entity Training {
+	id Long,
+	status TrainStatus  required,
+	name String  required,
+    commissionAmount Float required,
+	avgRating Float ,
+	startDate Instant,
+	endDate  Instant,  
+	remarks String
+}
+
+/**
+ * TrainingRecord entity.
+ * @author full stack trainning laidongshi.
+ */
+entity TrainingRecord {
+	id Long,
+	status TrainRecordStatus  required,
+	progress ProgressType required,
+    commissionAmount Float required,
+	avgRating Float ,
+	amountReceived Float required,    
+    userName String ,	   
+    fees Float required,
+	remarks String
+}
+enum ProgressType {
+	One,Two,Three,Four
+}
+enum DurationType {
+	Morning0800, Morning1000,Afternoon1400,Afternoon1600
+}
+
+enum TrainStatus {
+	Active, Inactive
+}
+
+enum TrainRecordStatus {
+	Propose,Progress, Completed
+}
+relationship ManyToOne {
+	TrainingRecord{training(name)} to Training
+}
+
+
+relationship ManyToOne {
+	MentorSkill{mentor(firstName)} to Mentor
+}
+
+
+relationship OneToOne {
+	MyCalendar{training(name)} to Training
+}
+
+// Set pagination options
+paginate TrainingRecord with infinite-scroll
+paginate TrainingRecord with pagination
+
+// Set pagination options
+paginate Training with infinite-scroll
+paginate Training with pagination
+
+//  Data Transfert Objects (DTO)
+// dto * with mapstruct
+service all with serviceImpl
+
