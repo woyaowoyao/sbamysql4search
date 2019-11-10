@@ -1,0 +1,16 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "payments",
+      "trainings",
+      "users",
+      "zuul-gateway"
+    ],
+    "directoryPath": "../",
+    "gatewayType": "zuul",
+    "monitoring": "no",
+    "consoleOptions": [],
+    "serviceDiscoveryType": "eureka",
+    "jwtSecretKey": "ZjgxNzNmNWI4ODg4YjE4ZTMzNDU0NmQzMWM2MDA3MjVlMjAxNzFmMWE2Mjc2MjVmNWVmYmJjMThjNjBhYjg0MTEyMzQxMTM3ZWYzYmU5ZTM1OWU2ODE5ODVlMDczNTBjZDlkNw=="
+  }
+}

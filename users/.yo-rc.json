@@ -1,0 +1,48 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.laidongs.sba.user"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "uaa",
+    "baseName": "users",
+    "packageName": "com.laidongs.sba.user",
+    "packageFolder": "com/laidongs/sba/user",
+    "serverPort": "9088",
+    "authenticationType": "uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MzE2MWYwN2IwN2MwZTJjYTExNTJjMTI0ODM1NjcxODg5MWZiNTBiZjkyMzZlY2RkYTEwYWI0NGM4ZTA0OGE5OTkxZTI2MTc0ZTAyY2I3OWJkOGZkZWJhMDhjZDEyMzQ4YWQ4NWRlNTdkMGQ2Mjg2YTRlMzk2ZWY5Y2UzMDcyNDY=",
+    "embeddableLaunchScript": false,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "appsFolders": [
+      "payments",
+      "technology",
+      "technology-skill",
+      "trainings",
+      "users",
+      "zuul-gateway"
+    ],
+    "directoryPath": "../",
+    "gatewayType": "zuul",
+    "monitoring": "no",
+    "consoleOptions": []
+  }
+}
