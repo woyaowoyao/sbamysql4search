@@ -1,0 +1,48 @@
+{
+    "name": "Mentor",
+    "fields": [
+        {
+            "fieldName": "username",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "linkedin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regDatetime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "regCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "experience",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "TrainStatus",
+            "fieldValues": "Active,Inactive",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191110050030",
+    "entityTableName": "mentor",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "trainings",
+    "applications": "*",
+    "microserviceName": "trainings"
+}

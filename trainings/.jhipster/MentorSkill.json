@@ -1,0 +1,33 @@
+{
+    "name": "MentorSkill",
+    "fields": [
+        {
+            "fieldName": "selfRate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "experience",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mentor",
+            "otherEntityRelationshipName": "mentorSkill",
+            "relationshipName": "mentor",
+            "otherEntityField": "firstName"
+        }
+    ],
+    "changelogDate": "20191110050031",
+    "entityTableName": "mentor_skill",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "trainings",
+    "applications": "*",
+    "microserviceName": "trainings"
+}
