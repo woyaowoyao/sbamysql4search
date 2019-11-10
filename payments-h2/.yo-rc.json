@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.laidongs.sba.gateway"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "microservice",
+    "baseName": "payments",
+    "packageName": "com.laidongs.sba.gateway",
+    "packageFolder": "com/laidongs/sba/gateway",
+    "serverPort": "9083",
+    "authenticationType": "uaa",
+    "uaaBaseName": "users",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MzI4ZjhmNTc0YzhhMDAyMjZkMTIxZWJmZGI1ZmMwYjFiYmRmMDBjYzU3N2I1MDJiMDEyZDhhNmM1YmZiM2NmNWQ3ZjYxMTAxOWMxZDRmNzQ2OTY4ZjhiZjk1MDRhODlmYWU4MWQ5ZDAzMDllMGU5NjczMDk5MDA1YzUyYzVhMDg=",
+    "embeddableLaunchScript": false,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
